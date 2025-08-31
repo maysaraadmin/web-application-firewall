@@ -1,0 +1,5 @@
+# XSS patterns
+<script[^>]*>[\s\S]*?<\/script>
+<[^>]*\s+on\w+\s*=[\s\S]*?>
+javascript:
+<[^>]*\s+style\s*=[\s\S]*?expression\s*\([\s\S]*?\)[\s\S]*?>

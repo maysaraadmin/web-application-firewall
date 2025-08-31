@@ -1,0 +1,20 @@
+# Basic Web Application Firewall Rules
+# This file contains basic protection rules for common web attacks
+
+# 1. SQL Injection
+(?i)\b(?:alter|create|delete|drop|exec|insert|select|update|union|where|xp_)\b
+
+# 2. Cross-site Scripting (XSS)
+<[^>]*(?:>|$)\s*[a-z0-9\-]+\s*=\s*["'].*?[^>]*>
+
+# 3. Path Traversal
+(?:\.\./|\\)
+
+# 4. Command Injection
+(?:;|`|\$\(|\|\||&&)
+
+# 5. Block common web shells
+(?:cmd\.exe|wget|curl|bash\.sh|nc\s+\-l|/bin/sh|/bin/bash)
+
+# 6. Block common vulnerability scanners
+(?:nikto|w3af|acunetix|appscan|nessus|netsparker|sqlmap)"

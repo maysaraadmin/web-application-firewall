@@ -1,0 +1,5 @@
+# SQL Injection patterns
+\b(?:union|select|insert|update|delete|drop|alter|create|exec)\s+.*?\b(?:from|into|table|database|where)\b
+\b(?:union|select|insert|update|delete|drop|alter|create|exec)\s*\(.*?\)
+\b(?:or|and)\s+[\w\-]+\s*[=<>]+\s*[\w\-]+\s*
+\b(?:or|and)\s+\d+\s*=\s*\d+\s*

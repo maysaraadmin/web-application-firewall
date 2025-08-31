@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QPushButton,
-                            QGroupBox, QTextEdit, QLabel, QSplitter, QFrame)
-from PyQt5.QtCore import Qt
+                            QGroupBox, QTextEdit, QLabel, QSplitter, QFrame,
+                            QMessageBox)
+from PyQt5.QtCore import Qt, QTimer
 
 class DashboardTab(QWidget):
     def __init__(self, waf_manager):
